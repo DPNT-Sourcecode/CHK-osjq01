@@ -80,7 +80,7 @@ def checkout(skus):
     for product in anythree:
         if product in basket.keys():
             # Add products to remaining list and remove from basket
-            remaining += [product for i in len(basket[product])]
+            remaining += [product for i in range(basket[product])]
             basket.pop([product])
 
             anythree_batch_size = len(remaining)//3
@@ -117,6 +117,7 @@ def checkout(skus):
 
 
     return total
+
 
 
 
