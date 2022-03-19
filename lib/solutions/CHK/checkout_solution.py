@@ -79,8 +79,9 @@ def checkout(skus):
     remaining = [] # The leftover products from previous item in buy any 3 group
     for product in anythree:
         if product in basket.keys():
-            remain = len(remaining) + basket[product]
-            anythree_batch = remain//3
+            remaining += [product for i in len(basket[product])]
+        
+            anythree_batch = len(remaining)//3
             if anythree_batch>0:
                 total+=anythree_batch*45
             remaining.append()
@@ -110,3 +111,4 @@ def checkout(skus):
 
 
     return total
+
