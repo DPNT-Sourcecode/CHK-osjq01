@@ -13,6 +13,9 @@ def checkout(skus):
         else:
             dict[c] = 1
 
+    # First remove those free items
+    if 'E' in dict
+
     # Calculate cost
     total = 0
     for product in dict.keys():
@@ -34,6 +37,7 @@ def checkout(skus):
 
 
     return total
+
 
 
 
