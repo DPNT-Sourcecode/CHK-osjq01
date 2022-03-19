@@ -22,6 +22,9 @@ def checkout(skus):
             else:
                 dict.pop('B')
 
+    if 'F' in dict and dict['F'] >=3:
+        dict['F'] -= dict['F']//3
+        
     # Calculate cost
     total = 0
     for product in dict.keys():
@@ -39,4 +42,5 @@ def checkout(skus):
 
 
     return total
+
 
