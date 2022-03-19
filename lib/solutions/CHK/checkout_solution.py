@@ -30,7 +30,9 @@ def checkout(skus):
     'Y':10, 
     'Z':50}
 
-    first_dicounts
+    initial_discounts={'A':
+
+    }
     dict = {}
     for c in skus:
         if c not in costs.keys():
@@ -74,4 +76,5 @@ def checkout(skus):
 
 
     return total
+
 
