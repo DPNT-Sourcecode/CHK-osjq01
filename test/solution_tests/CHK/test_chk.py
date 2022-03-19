@@ -55,5 +55,15 @@ class TestChk():
 
     def test_chkWrongProduct2(self):
         assert checkout_solution.checkout("A-C") == -1
+    
+    def test_chkStep4G(self):
+        assert checkout_solution.checkout("G") == 20
+
+    def test_chkStep4H(self):
+        assert checkout_solution.checkout("H") == 10
+
+        
+    def test_chkStep4Ha(self):
+        assert checkout_solution.checkout("H") == 10
 
 
