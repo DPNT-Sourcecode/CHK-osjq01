@@ -89,5 +89,26 @@ class TestChk():
     def test_chkStep4M(self):
         assert checkout_solution.checkout("M") == 15
 
-    def test_chkStep4L(self):
-        assert checkout_solution.checkout("L") == 90
+    def test_chkStep4Na(self):
+        assert checkout_solution.checkout("N") == 40
+
+    def test_chkStep4Nb(self):
+        assert checkout_solution.checkout("NNNM") == 120
+
+    def test_chkStep4O(self):
+        assert checkout_solution.checkout("O") == 10
+        
+    def test_chkStep4Pa(self):
+        assert checkout_solution.checkout("P") == 50
+
+    def test_chkStep4Pb(self):
+        assert checkout_solution.checkout("PPPPP") == 200
+
+    def test_chkStep4Qa(self):
+        assert checkout_solution.checkout("Q") == 30
+        
+    def test_chkStep4Qb(self):
+        assert checkout_solution.checkout("QQQ") == 80
+        
+    def test_chkStep4Ra(self):
+        assert checkout_solution.checkout("R") == 50
