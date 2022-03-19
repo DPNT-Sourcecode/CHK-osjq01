@@ -30,50 +30,66 @@ def checkout(skus):
     'Y':10, 
     'Z':50}
 
-    # initial_discounts={'A':
+    discounted = {
+        'A':[(5, 200), (3, 130)],
+        'B':[(2, 45)],
+        'H':[(10, 80), (5, 45)],
+        'K':[(2, 150)],
+        'P':[(5, 200)],
+        'Q':[(3, 80)],
+        'V':[(3, 130), (2, 90)],
+    }
 
-    # }
-    dict = {}
+    frees = {
+        'E':(2, 'B'),
+        'F':(3, 'F'), 
+        'N':(3, 'M'),
+        'R':(3, 'Q'),
+        'U':(4, 'U'),
+    }
+
+    basket = {}
     for c in skus:
         if c not in costs.keys():
             return -1
-        if c in dict:
-            dict[c]+=1
+        if c in basket:
+            basket[c]+=1
         else:
-            dict[c] = 1
+            basket[c] = 1
 
     # First remove those free items
-    if 'E' in dict:
-        freeB = dict['E']//2
-        if 'B' in dict:
-            if dict['B']>freeB:
-                dict['B']-=freeB
-            else:
-                dict.pop('B')
+    for product in frees.keys():
+        if product in basket.keys():
+            freeItem = basket[product]//frees[product][0]
+            # Tuple 1 shows the product code of free item
+            if frees[product][1] in basket.keys():
+                if basket[frees[product][1]] > freeItem:
+                    basket[frees[product][1]] -= freeItem
+                else:
+                    basket.pop(frees[product][1])
 
-    if 'F' in dict and dict['F'] >=3:
-        dict['F'] -= dict['F']//3
-        
     # Calculate cost
     total = 0
-    for product in dict.keys():
-        if product =='A':
-            price = (dict['A'] // 5)*200
-            left_unit = dict['A']%5
-            price += (left_unit // 3)*130+(left_unit % 3)*costs['A']
-        elif product =='B':
-            price = (dict['B']// 2)*45+(dict['B'] % 2)*costs['B']
-        if product =='H':
-            price = (dict['H'] // 10)*80
-            left_unit = dict['H']%10
-            price += (left_unit // 5)*45+(left_unit % 3)*costs['H']
+    for product in basket.keys():
+        if product in discounted.keys():
+            unit = basket[product]
+            cost = 0
+            # Buy x for this amount offer 
+            for discount_info in discounted[product]:
+                calculated_batch = unit//discount_info[0]
+                if calculated_batch > 0:
+                    unit -= calculated_batch * discount_info[0]
+                    cost += calculated_batch * discount_info[1]
+                    
+            # Remaining units
+            if unit !=0 :
+                cost += unit * costs[product]
        
         else:
             # Use unit prices
-            price = dict[product] *costs[product]
+            cost = basket[product] * costs[product]
            
-        total += price
+        total += cost
 
 
     return total
-
