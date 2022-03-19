@@ -112,3 +112,31 @@ class TestChk():
         
     def test_chkStep4Ra(self):
         assert checkout_solution.checkout("R") == 50
+
+    def test_chkStep4Rb(self):
+        assert checkout_solution.checkout("RRRQ") == 150
+        
+    def test_chkStep4S(self):
+        assert checkout_solution.checkout("S") == 30
+
+    def test_chkStep4T(self):
+        assert checkout_solution.checkout("T") == 20
+        
+    def test_chkStep4Ua(self):
+        assert checkout_solution.checkout("U") == 40
+
+    def test_chkStep4Ub(self):
+        assert checkout_solution.checkout("UUUU") == 120
+
+    def test_chkStep4Va(self):
+        assert checkout_solution.checkout("V") == 50
+        
+    def test_chkStep4Vb(self):
+        assert checkout_solution.checkout("VV") == 90
+        
+    def test_chkStep4Vc(self):
+        assert checkout_solution.checkout("VVV") == 130
+        
+    def test_chkStep4Vd(self):
+        assert checkout_solution.checkout("VVVVV") == 220
+        
