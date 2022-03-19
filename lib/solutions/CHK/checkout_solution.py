@@ -70,7 +70,13 @@ def checkout(skus):
                     basket[frees[product][1]] -= freeItem
                 else:
                     basket.pop(frees[product][1])
-        
+    
+    # Process any three offer
+    # Looking at unit prices, any three for 45 will always be the cheapest option
+    # X, S,T,Y,Z
+    for product in anythree:
+        total_anythree = basket[]
+
     # Calculate cost
     total = 0
     for product in basket.keys():
@@ -96,5 +102,6 @@ def checkout(skus):
 
 
     return total
+
 
 
