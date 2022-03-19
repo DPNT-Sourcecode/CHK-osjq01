@@ -67,7 +67,7 @@ def checkout(skus):
                     basket[frees[product][1]] -= freeItem
                 else:
                     basket.pop(frees[product][1])
-
+        
     # Calculate cost
     total = 0
     for product in basket.keys():

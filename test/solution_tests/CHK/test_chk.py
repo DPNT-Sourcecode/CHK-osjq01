@@ -139,4 +139,16 @@ class TestChk():
         
     def test_chkStep4Vd(self):
         assert checkout_solution.checkout("VVVVV") == 220
+
+    def test_chkStep4W(self):
+        assert checkout_solution.checkout("W") == 20
+
+    def test_chkStep4X(self):
+        assert checkout_solution.checkout("X") == 90
+        
+    def test_chkStep4Y(self):
+        assert checkout_solution.checkout("Y") == 10
+        
+    def test_chkStep4Z(self):
+        assert checkout_solution.checkout("Z") == 50
         
