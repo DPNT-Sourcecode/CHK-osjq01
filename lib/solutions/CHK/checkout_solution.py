@@ -14,9 +14,12 @@ def checkout(skus):
     # Calculate cost
     total = 0
     for product in dict.keys():
-        total += dict[product] *costs[product]
+        price 
+        dict[product] *costs[product]
 
+        total += this
     return total
+
 
 
 
