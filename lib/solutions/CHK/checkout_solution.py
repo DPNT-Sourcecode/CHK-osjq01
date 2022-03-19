@@ -3,6 +3,7 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
+    skus.upper()
     costs = {'A':50, 'B':30, 'C':20, 'D':15}
     dict = {}
     for c in skus:
@@ -26,6 +27,7 @@ def checkout(skus):
 
 
     return total
+
 
 
 
