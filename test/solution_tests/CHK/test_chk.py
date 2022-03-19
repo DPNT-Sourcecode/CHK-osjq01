@@ -28,4 +28,3 @@ class TestChk():
 
     def test_chkWrongProduct2(self):
         assert checkout_solution.checkout("A-C") == -1
-
