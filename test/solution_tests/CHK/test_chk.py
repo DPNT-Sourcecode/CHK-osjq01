@@ -21,7 +21,10 @@ class TestChk():
         assert checkout_solution.checkout("ABAABC") == 195
     
     def test_chkDiscount3(self):
-        assert checkout_solution.checkout("ABAABCABAABABD") == 465
+        assert checkout_solution.checkout("ABAABCABAABABD") == 455
+
+    def test_chkDiscount4(self):
+        assert checkout_solution.checkout("ABEE") == 130
 
     def test_chkWrongProduct(self):
         assert checkout_solution.checkout("a") == -1

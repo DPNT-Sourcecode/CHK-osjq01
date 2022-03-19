@@ -24,13 +24,17 @@ def checkout(skus):
                 price = (dict['A'] // 3)*130+(dict['A'] % 3)*costs['A']
         elif product =='B':
             price = (dict['B']// 2)*45+(dict['B'] % 2)*costs['B']
-        elif product =='E' and dict['B']>0:
-            price -= (dict['E']// 2)*costs['B']
-        else:  # Use unit prices
+        else:
+            # Use unit prices
             price = dict[product] *costs[product]
 
+            # Get one free offer
+            if product =='E' and dict['B']>0:
+                price -= (dict['E']// 2)*costs['B']  
+           
         total += price
 
 
     return total
+
 
