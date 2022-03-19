@@ -28,13 +28,14 @@ def checkout(skus):
             price = dict[product] *costs[product]
 
             # Get one free offer
-            if product =='E' and 'B' in dict.keys() and dict['B']]>0:
+            if product =='E' and 'B' in dict.keys() and dict['B']>0:
                 price -= (dict['E']// 2)*costs['B']  
            
         total += price
 
 
     return total
+
 
 
 
