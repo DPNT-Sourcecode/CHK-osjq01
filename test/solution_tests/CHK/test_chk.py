@@ -78,7 +78,7 @@ class TestChk():
         assert checkout_solution.checkout("J") == 60
 
     def test_chkStep4Ka(self):
-        assert checkout_solution.checkout("K") == 80
+        assert checkout_solution.checkout("K") == 70
 
     def test_chkStep4Kb(self):
         assert checkout_solution.checkout("KK") == 150
@@ -117,7 +117,7 @@ class TestChk():
         assert checkout_solution.checkout("RRRQ") == 150
         
     def test_chkStep4S(self):
-        assert checkout_solution.checkout("S") == 30
+        assert checkout_solution.checkout("S") == 20
 
     def test_chkStep4T(self):
         assert checkout_solution.checkout("T") == 20
@@ -144,11 +144,11 @@ class TestChk():
         assert checkout_solution.checkout("W") == 20
 
     def test_chkStep4X(self):
-        assert checkout_solution.checkout("X") == 90
+        assert checkout_solution.checkout("X") == 17
         
     def test_chkStep4Y(self):
-        assert checkout_solution.checkout("Y") == 10
+        assert checkout_solution.checkout("Y") == 20
         
     def test_chkStep4Z(self):
-        assert checkout_solution.checkout("Z") == 50
+        assert checkout_solution.checkout("Z") == 21
         
