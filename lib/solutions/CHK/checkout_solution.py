@@ -3,7 +3,7 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    skus.upper()
+    skus = skus.upper()
     costs = {'A':50, 'B':30, 'C':20, 'D':15}
     dict = {}
     for c in skus:
@@ -16,10 +16,11 @@ def checkout(skus):
     total = 0
     print(dict)
     for product in dict.keys():
-        if product =='A' and dict[product] == 3:
-            price = 130
+        if product =='A':
+            price = (dict[product] % 3)*130+(dict[product] % 3)*50
         elif product =='B' and dict[product] == 2:
-            price = 45
+            price = (dict[product] % 2)*45+(dict[product] % 2)*30
+        
         else:  # Use unit prices
             price = dict[product] *costs[product]
 
@@ -27,12 +28,4 @@ def checkout(skus):
 
 
     return total
-
-
-
-
-
-
-
-
 
