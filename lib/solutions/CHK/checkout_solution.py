@@ -14,7 +14,13 @@ def checkout(skus):
             dict[c] = 1
 
     # First remove those free items
-    if 'E' in dict
+    if 'E' in dict:
+        freeB = dict['E']//2
+        if 'B' in dict:
+            if dict['B']>freeB:
+                dict['B']-=freeB
+            else:
+                dict.pop('B')
 
     # Calculate cost
     total = 0
@@ -28,15 +34,12 @@ def checkout(skus):
         else:
             # Use unit prices
             price = dict[product] *costs[product]
-
-            # Get one free offer
-            if product =='E' and 'B' in dict.keys() and dict['B']>0:
-                price -= (dict['E']// 2)*costs['B']  
            
         total += price
 
 
     return total
+
 
 
 
