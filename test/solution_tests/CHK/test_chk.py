@@ -81,7 +81,7 @@ class TestChk():
         assert checkout_solution.checkout("K") == 70
 
     def test_chkStep4Kb(self):
-        assert checkout_solution.checkout("KK") == 150
+        assert checkout_solution.checkout("KK") == 120
 
     def test_chkStep4L(self):
         assert checkout_solution.checkout("L") == 90

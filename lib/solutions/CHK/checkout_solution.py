@@ -49,6 +49,8 @@ def checkout(skus):
         'U':(4, 'U'),
     }
 
+    anythree = ['S','T','X','Y','Z']
+
     basket = {}
     for c in skus:
         if c not in costs.keys():
@@ -94,4 +96,5 @@ def checkout(skus):
 
 
     return total
+
 
