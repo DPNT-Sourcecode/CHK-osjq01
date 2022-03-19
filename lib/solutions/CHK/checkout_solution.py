@@ -3,7 +3,21 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    costs = {'A':50, 'B':30, 'C':20, 'D':15, 'E':40, 'F':10}
+    costs = {'A':50, 
+    'B':30, 
+    'C':20, 
+    'D':15, 
+    'E':40, 
+    'F':10, 
+    'G':20, 
+    'H':10, 
+    'I':35, 
+    'J':60, 
+    'K':80, 
+    'L':90, 
+    'M':15, 
+    'N':40, 
+    'O'}
     dict = {}
     for c in skus:
         if c not in costs.keys():
@@ -42,6 +56,7 @@ def checkout(skus):
 
 
     return total
+
 
 
 
