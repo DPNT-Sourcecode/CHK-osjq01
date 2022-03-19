@@ -3,12 +3,11 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    skus = skus.upper()
     costs = {'A':50, 'B':30, 'C':20, 'D':15}
     dict = {}
     for c in skus:
         if c not in costs.keys():
-            continue
+            return -1
         if c in dict:
             dict[c]+=1
         else:
