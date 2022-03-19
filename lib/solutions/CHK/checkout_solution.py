@@ -17,10 +17,9 @@ def checkout(skus):
     print(dict)
     for product in dict.keys():
         if product =='A':
-            price = (dict[product] % 3)*130+(dict[product] % 3)*50
-        elif product =='B' and dict[product] == 2:
-            price = (dict[product] % 2)*45+(dict[product] % 2)*30
-        
+            price = (dict[product] // 3)*130+(dict[product] % 3)*50
+        elif product =='B':
+            price = (dict[product]// 2)*45+(dict[product] % 2)*30
         else:  # Use unit prices
             price = dict[product] *costs[product]
 
@@ -28,4 +27,5 @@ def checkout(skus):
 
 
     return total
+
 
