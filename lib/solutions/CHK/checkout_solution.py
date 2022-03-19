@@ -17,10 +17,9 @@ def checkout(skus):
     total = 0
     for product in dict.keys():
         if product =='A':
-            if dict['A']>=5:
-                price = (dict['A'] // 5)*200+(dict['A'] % 5)*costs['A']
-            else:
-                price = (dict['A'] // 3)*130+(dict['A'] % 3)*costs['A']
+            price = (dict['A'] // 5)*200
+            left_unit = dict['A']%5
+            price += (left_unit // 3)*130+(left_unit % 3)*costs['A']
         elif product =='B':
             price = (dict['B']// 2)*45+(dict['B'] % 2)*costs['B']
         else:
@@ -35,6 +34,7 @@ def checkout(skus):
 
 
     return total
+
 
 
 
