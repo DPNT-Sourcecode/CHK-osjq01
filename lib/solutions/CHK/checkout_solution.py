@@ -29,6 +29,8 @@ def checkout(skus):
     'X':90,
     'Y':10, 
     'Z':50}
+
+    first_dicounts
     dict = {}
     for c in skus:
         if c not in costs.keys():
@@ -59,6 +61,11 @@ def checkout(skus):
             price += (left_unit // 3)*130+(left_unit % 3)*costs['A']
         elif product =='B':
             price = (dict['B']// 2)*45+(dict['B'] % 2)*costs['B']
+        if product =='H':
+            price = (dict['H'] // 10)*80
+            left_unit = dict['H']%10
+            price += (left_unit // 5)*45+(left_unit % 3)*costs['H']
+       
         else:
             # Use unit prices
             price = dict[product] *costs[product]
@@ -67,7 +74,4 @@ def checkout(skus):
 
 
     return total
-
-
-
 
