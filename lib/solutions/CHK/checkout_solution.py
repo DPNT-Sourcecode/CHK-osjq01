@@ -3,7 +3,8 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    costs = {'A':50, 
+    costs = {
+    'A':50, 
     'B':30, 
     'C':20, 
     'D':15, 
@@ -13,7 +14,7 @@ def checkout(skus):
     'H':10, 
     'I':35, 
     'J':60, 
-    'K':80, 
+    'K':70, 
     'L':90, 
     'M':15, 
     'N':40, 
@@ -21,12 +22,12 @@ def checkout(skus):
     'P':50, 
     'Q':30, 
     'R':50, 
-    'S':30, 
+    'S':20, 
     'T':20,
     'U':40, 
     'V':50, 
     'W':20,
-    'X':90,
+    'X':17,
     'Y':10, 
     'Z':50}
 
@@ -93,3 +94,4 @@ def checkout(skus):
 
 
     return total
+
