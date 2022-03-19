@@ -154,5 +154,3 @@ class TestChk():
                         
     def test_chkAnythree1(self):
         assert checkout_solution.checkout("STX") == 45
-
-

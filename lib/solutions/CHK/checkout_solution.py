@@ -76,13 +76,15 @@ def checkout(skus):
     
     # Process any three offer
     # Looking at unit prices, any three for 45 will always be the cheapest option
-    remain = 0
+    remaining = [] # The leftover products from previous item in buy any 3 group
     for product in anythree:
         if product in basket.keys():
-            remain += basket[product]
+            remain = len(remaining) + basket[product]
             anythree_batch = remain//3
             if anythree_batch>0:
                 total+=anythree_batch*45
+            remaining.append()
+            
                 
     # Other items in basket
     for product in basket.keys():
@@ -108,10 +110,3 @@ def checkout(skus):
 
 
     return total
-
-
-
-
-
-
-
