@@ -76,20 +76,15 @@ def checkout(skus):
     
     # Process any three offer
     # Looking at unit prices, any three for 45 will always be the cheapest option
-    
     remain = 0
     for product in anythree:
         if product in basket.keys():
-            anythree_batch = total_anythree//3    
-            total =  anythree_batch * 45
-    
-            total_anythree = basket[product]
+            remain += basket[product]
+            anythree_batch = remain//3
+            if anythree_batch>0:
+                total+=anythree_batch*45
 
-
-    anythree_batch = total_anythree//3    
-    total =  anythree_batch * 45
-    total 
-
+    # Remaining items in basket
     for product in basket.keys():
         if product in discounted.keys():
             unit = basket[product]
@@ -113,6 +108,7 @@ def checkout(skus):
 
 
     return total
+
 
 
 

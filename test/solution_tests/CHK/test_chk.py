@@ -151,4 +151,7 @@ class TestChk():
         
     def test_chkStep4Z(self):
         assert checkout_solution.checkout("Z") == 21
-        
+                        
+    def test_chkStep4Z(self):
+        assert checkout_solution.checkout("Z") == 21
+
