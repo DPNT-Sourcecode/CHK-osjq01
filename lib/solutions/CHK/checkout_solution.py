@@ -83,8 +83,8 @@ def checkout(skus):
             anythree_batch = remain//3
             if anythree_batch>0:
                 total+=anythree_batch*45
-
-    # Remaining items in basket
+                
+    # Other items in basket
     for product in basket.keys():
         if product in discounted.keys():
             unit = basket[product]
@@ -108,6 +108,7 @@ def checkout(skus):
 
 
     return total
+
 
 
 
