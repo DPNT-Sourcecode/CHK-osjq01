@@ -159,7 +159,7 @@ class TestChk():
         assert checkout_solution.checkout("STX") == 45
 
     def test_chkAnythree2(self):
-        assert checkout_solution.checkout("SSTTTXZ") == 110
+        assert checkout_solution.checkout("SSTTTXZ") == 107
 
     def test_chkAnythree3(self):
         assert checkout_solution.checkout("STXS") == 62
@@ -169,6 +169,7 @@ class TestChk():
 
     def test_chkAnythree5(self):
         assert checkout_solution.checkout("ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ") == 1602
+
 
 
 
