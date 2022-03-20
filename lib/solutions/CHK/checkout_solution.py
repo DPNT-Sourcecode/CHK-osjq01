@@ -49,7 +49,7 @@ def checkout(skus):
         'U':(4, 'U'),
     }
 
-    anythree = ['Z', 'Y', 'X', 'T', 'S'] # Order from expensive to cheapest
+    anythree = ['Z', 'Y', 'S', 'T', 'X'] # Order from expensive to cheapest
 
     basket = {}
     for c in skus:
@@ -117,6 +117,7 @@ def checkout(skus):
 
 
     return total
+
 
 
 
