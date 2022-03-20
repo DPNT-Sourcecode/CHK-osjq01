@@ -169,7 +169,3 @@ class TestChk():
 
     def test_chkAnythree5(self):
         assert checkout_solution.checkout("ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ") == 1602
-
-
-
-
